@@ -1,9 +1,12 @@
 // Service Worker pro PWA funkcionalita
-const CACHE_NAME = 'portfolio-v3';
+const CACHE_NAME = 'portfolio-v4';
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/favicon.svg',
+  '/icons/favicon.svg',
+  '/icons/favicon-32x32.png',
+  '/icons/android-chrome-192x192.png',
+  '/icons/android-chrome-512x512.png',
   '/logo/logo.svg',
   '/manifest.json'
 ];
