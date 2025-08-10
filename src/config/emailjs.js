@@ -6,9 +6,9 @@
 // 4. Zkopírujte své ID a nahraďte níže
 
 export const EMAILJS_CONFIG = {
-  SERVICE_ID: 'service_portfolio',
-  TEMPLATE_ID: 'template_portfolio', 
-  PUBLIC_KEY: 'portfolio_public_key_123'
+  SERVICE_ID: 'service_1jdkm8j', // Gmail service
+  TEMPLATE_ID: 'template_vgm1olt', // ROI template
+  PUBLIC_KEY: '4_oYdBtEGR3cNbdK8' // public key
 };
 
 // Příklad šablony pro EmailJS:

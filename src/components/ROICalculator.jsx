@@ -554,18 +554,21 @@ const ROICalculator = () => {
     cookieDays: 7 // Don't show again for 7 days
   });
   
-  // Auto-show email capture after calculation
+  // Auto-show email capture after calculation  
   useEffect(() => {
-    if (state.results && !showEmailCapture && hasCalculatedOnce && !emailCaptureDisabled) {
-      console.log('ROI Calculator: Setting up email capture timer');
+    if (state.results && hasCalculatedOnce && !emailCaptureDisabled && !showEmailCapture) {
+      console.log('🕐 ROI Email modal bude otevřen za 25 sekund...');
       const timer = setTimeout(() => {
-        console.log('ROI Calculator: Showing email capture modal');
+        console.log('📧 Otevírám ROI Email capture modal!');
         setShowEmailCapture(true);
-      }, 30000); // Show after 30 seconds - plenty of time to read all results
+      }, 25000); // 25 sekund po výpočtu
       
-      return () => clearTimeout(timer);
+      return () => {
+        console.log('⏹️ ROI Timer zrušen');
+        clearTimeout(timer);
+      };
     }
-  }, [state.results, showEmailCapture, hasCalculatedOnce, emailCaptureDisabled]);
+  }, [state.results, hasCalculatedOnce, emailCaptureDisabled, showEmailCapture]);
   
   // Handle email capture close with per-session persistence
   const handleEmailCaptureClose = () => {
@@ -574,6 +577,7 @@ const ROICalculator = () => {
     setEmailCaptureDisabled(true);
     sessionStorage.setItem('emailCaptureDisabled', 'true');
   };
+
 
   // Debug function to reset all modal suppressions (accessible via console)
   window.resetROIModals = () => {
@@ -1301,6 +1305,7 @@ const ROICalculator = () => {
               )}
             </AnimatePresence>
             
+
             {/* Results - PREMIUM VERSION */}
             <AnimatePresence>
               {state.results && (
