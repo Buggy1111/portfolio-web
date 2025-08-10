@@ -1,14 +1,12 @@
 import { motion } from 'framer-motion';
 import { FiMail, FiPhone, FiMapPin, FiSend } from 'react-icons/fi';
-import { useState, useRef } from 'react';
-import emailjs from '@emailjs/browser';
-import { EMAILJS_CONFIG } from '../config/emailjs';
+import { useState } from 'react';
+// Removed EmailJS imports - using Formspree instead
 import { useLanguage } from '../context/LanguageContext';
 // Removed unused imports
 
 const Contact = () => {
   const { t } = useLanguage();
-  const form = useRef();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -22,7 +20,7 @@ const Contact = () => {
   });
   const [lastSubmission, setLastSubmission] = useState(0);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
     // Rate limiting - maximálně 1 zpráva za 30 sekund
@@ -44,38 +42,48 @@ const Contact = () => {
     setStatus({ submitting: true, submitted: false, error: false, message: '' });
     setLastSubmission(now);
 
-    // EmailJS odeslání
-    emailjs.sendForm(
-      EMAILJS_CONFIG.SERVICE_ID,
-      EMAILJS_CONFIG.TEMPLATE_ID,
-      form.current,
-      EMAILJS_CONFIG.PUBLIC_KEY
-    )
-    .then((result) => {
-      console.log('Email sent successfully:', result.text);
-      setStatus({
-        submitting: false,
-        submitted: true,
-        error: false,
-        message: t('contact.success')
+    try {
+      // Formspree submission
+      const response = await fetch('https://formspree.io/f/meozvrvg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _replyto: formData.email,
+          _subject: `Nová zpráva z portfolia od ${formData.name}`
+        })
       });
-      setFormData({ name: '', email: '', message: '' });
-    }, (error) => {
-      console.error('Email send failed:', error.text);
+
+      if (response.ok) {
+        setStatus({
+          submitting: false,
+          submitted: true,
+          error: false,
+          message: t('contact.success')
+        });
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Network response was not ok');
+      }
+    } catch (error) {
+      console.error('Form submission failed:', error);
       setStatus({
         submitting: false,
         submitted: false,
         error: true,
         message: t('contact.error')
       });
-    });
+    }
   };
 
   const handleChange = (e) => {
-    const fieldName = e.target.name.replace('from_', '');
     setFormData({
       ...formData,
-      [fieldName]: e.target.value
+      [e.target.name]: e.target.value
     });
   };
 
@@ -158,7 +166,6 @@ const Contact = () => {
           </motion.div>
 
           <motion.form
-            ref={form}
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -173,7 +180,7 @@ const Contact = () => {
               <input
                 type="text"
                 id="name"
-                name="from_name"
+                name="name"
                 value={formData.name}
                 onChange={handleChange}
                 required
@@ -189,7 +196,7 @@ const Contact = () => {
               <input
                 type="email"
                 id="email"
-                name="from_email"
+                name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required

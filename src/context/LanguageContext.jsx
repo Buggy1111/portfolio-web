@@ -225,7 +225,7 @@ const translations = {
         emailHint: 'Použijte formulář níže'
       },
       success: 'Děkuji za vaši zprávu! Ozvu se vám co nejdříve.',
-      error: 'Něco se pokazilo. Zkuste to prosím znovu nebo mě kontaktujte přímo na michal@michalbugar.dev',
+      error: 'Něco se pokazilo. Zkuste to prosím znovu nebo mě kontaktujte přímo na michalbugy12@gmail.com',
       rateLimit: 'Příliš mnoho požadavků. Zkuste to prosím za {seconds} sekund.'
     },
 
@@ -481,7 +481,7 @@ const translations = {
         emailHint: 'Use the form below'
       },
       success: 'Thank you for your message! I will get back to you as soon as possible.',
-      error: 'Something went wrong. Please try again or contact me directly at michal@michalbugar.dev',
+      error: 'Something went wrong. Please try again or contact me directly at michalbugy12@gmail.com',
       rateLimit: 'Too many requests. Please try again in {seconds} seconds.'
     },
 

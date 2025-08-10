@@ -136,7 +136,7 @@ const Hero = () => {
               </motion.a>
               
               <motion.a
-                href="mailto:michal@michalbugar.dev"
+                href="mailto:michalbugy12@gmail.com"
                 className="p-3 glass-effect rounded-full hover-glow"
                 whileHover={{ y: -5 }}
               >
@@ -147,21 +147,18 @@ const Hero = () => {
         </div>
       </div>
       
+      {/* Scroll Down Arrow */}
       <motion.button
         onClick={scrollToProjects}
-        aria-label="Přejít na sekci projektů"
-        className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 p-2 md:p-3 glass-effect rounded-full hover-glow touch-target focus:ring-4 focus:ring-blue-500/50 focus:outline-none"
-        animate={{ y: [0, 10, 0] }}
+        aria-label="Scroll down to projects"
+        className="absolute bottom-8 md:bottom-12 left-1/2 transform -translate-x-1/2 p-4 bg-emerald-500/20 hover:bg-emerald-500/30 backdrop-blur-sm border border-emerald-500/30 rounded-full hover-glow transition-all duration-300 z-10 group"
+        animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
-        onKeyDown={(e) => {
-          if (e.key === 'Enter' || e.key === ' ') {
-            e.preventDefault();
-            scrollToProjects();
-          }
-        }}
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
       >
-        <FiChevronDown className="w-5 h-5 md:w-6 md:h-6" aria-hidden="true" />
-        <span className="sr-only">Scroll dolů na projekty</span>
+        <FiChevronDown className="w-6 h-6 md:w-7 md:h-7 text-emerald-500 group-hover:text-emerald-400 transition-colors" />
+        <div className="absolute inset-0 rounded-full bg-emerald-400/10 animate-pulse" />
       </motion.button>
     </section>
   );
