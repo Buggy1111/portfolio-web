@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Test Runner 2025</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #0a0a0a;
+            color: #e5e5e5;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        h1 {
+            background: linear-gradient(to right, #10b981, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+        .test-info {
+            background: rgba(30, 30, 30, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(10px);
+        }
+        .button-group {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        button {
+            background: linear-gradient(to right, #10b981, #06b6d4);
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+        button:active {
+            transform: translateY(0);
+        }
+        button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .secondary {
+            background: #374151;
+        }
+        .danger {
+            background: linear-gradient(to right, #ef4444, #dc2626);
+        }
+        iframe {
+            width: 100%;
+            height: 700px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            background: white;
+        }
+        .console-output {
+            background: #1a1a1a;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            margin-top: 20px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            max-height: 400px;
+            overflow-y: auto;
+            white-space: pre-wrap;
+        }
+        .test-result {
+            padding: 4px 0;
+        }
+        .pass { color: #10b981; }
+        .fail { color: #ef4444; }
+        .warning { color: #f59e0b; }
+        .info { color: #3b82f6; }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .test-card {
+            background: rgba(30, 30, 30, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 16px;
+            backdrop-filter: blur(10px);
+        }
+        .test-card h3 {
+            margin: 0 0 8px 0;
+            color: #10b981;
+        }
+        .test-card p {
+            margin: 4px 0;
+            font-size: 14px;
+            color: #9ca3af;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-ready { background: #10b981; }
+        .status-running { background: #3b82f6; animation: pulse 1s infinite; }
+        .status-error { background: #ef4444; }
+        
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Portfolio Test Runner 2025</h1>
+        
+        <div class="test-info">
+            <h2>Test Information</h2>
+            <p><strong>Test Suite:</strong> Comprehensive Professional Tests</p>
+            <p><strong>Coverage:</strong> Language Switching, ROI Calculator, Email Capture, Responsive Design, Accessibility, Performance, SEO, Error Handling, Case Studies, Contact Form</p>
+            <p><strong>Environment:</strong> <span id="environment">Development</span></p>
+            <p><strong>Status:</strong> <span class="status-indicator status-ready"></span><span id="status">Ready</span></p>
+        </div>
+
+        <div class="grid">
+            <div class="test-card">
+                <h3>🌍 Internationalization</h3>
+                <p>Tests language switching between Czech and English</p>
+                <p>Checks all UI elements are translated</p>
+            </div>
+            <div class="test-card">
+                <h3>💰 ROI Calculator</h3>
+                <p>Tests all calculator types and inputs</p>
+                <p>Verifies calculations and email capture</p>
+            </div>
+            <div class="test-card">
+                <h3>📱 Responsive Design</h3>
+                <p>Tests mobile menu and touch targets</p>
+                <p>Verifies custom scrollbar implementation</p>
+            </div>
+            <div class="test-card">
+                <h3>♿ Accessibility</h3>
+                <p>Tests ARIA labels and focus management</p>
+                <p>Verifies skip navigation and keyboard access</p>
+            </div>
+            <div class="test-card">
+                <h3>⚡ Performance</h3>
+                <p>Tests lazy loading and WebP images</p>
+                <p>Measures bundle size and load time</p>
+            </div>
+            <div class="test-card">
+                <h3>🔍 SEO & Errors</h3>
+                <p>Tests meta tags and structured data</p>
+                <p>Monitors console for runtime errors</p>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <button onclick="runTests()">🚀 Run All Tests</button>
+            <button onclick="runSpecificTest('language')" class="secondary">🌍 Test Language</button>
+            <button onclick="runSpecificTest('roi')" class="secondary">💰 Test ROI Calculator</button>
+            <button onclick="runSpecificTest('responsive')" class="secondary">📱 Test Responsive</button>
+            <button onclick="runSpecificTest('accessibility')" class="secondary">♿ Test Accessibility</button>
+            <button onclick="clearConsole()" class="danger">🗑️ Clear Console</button>
+        </div>
+
+        <iframe id="portfolio-frame" src="http://localhost:5173" title="Portfolio"></iframe>
+
+        <div class="console-output" id="console">
+            <div class="test-result info">🔧 Test Runner Ready - Click "Run All Tests" to begin</div>
+            <div class="test-result info">📌 Make sure the portfolio is running on http://localhost:5173</div>
+        </div>
+    </div>
+
+    <script>
+        const consoleOutput = document.getElementById('console');
+        const statusEl = document.getElementById('status');
+        const statusIndicator = document.querySelector('.status-indicator');
+        const iframe = document.getElementById('portfolio-frame');
+        
+        function log(message, type = 'info') {
+            const div = document.createElement('div');
+            div.className = `test-result ${type}`;
+            div.textContent = message;
+            consoleOutput.appendChild(div);
+            consoleOutput.scrollTop = consoleOutput.scrollHeight;
+        }
+
+        function updateStatus(status, running = false) {
+            statusEl.textContent = status;
+            statusIndicator.className = 'status-indicator';
+            if (running) {
+                statusIndicator.classList.add('status-running');
+            } else if (status.includes('Error')) {
+                statusIndicator.classList.add('status-error');
+            } else {
+                statusIndicator.classList.add('status-ready');
+            }
+        }
+
+        function clearConsole() {
+            consoleOutput.innerHTML = '<div class="test-result info">🔧 Console cleared</div>';
+        }
+
+        async function runTests() {
+            clearConsole();
+            updateStatus('Running tests...', true);
+            log('🚀 Starting comprehensive test suite...', 'info');
+            
+            try {
+                // Inject and run tests in iframe
+                const testScript = await fetch('../e2e/comprehensive-test-2025.js').then(r => r.text());
+                
+                iframe.contentWindow.eval(testScript);
+                
+                // Wait for tests to complete
+                setTimeout(async () => {
+                    try {
+                        const results = await iframe.contentWindow.runPortfolioTests();
+                        
+                        log('', 'info');
+                        log('📊 TEST RESULTS:', 'info');
+                        log(`✅ Passed: ${results.passed}`, 'pass');
+                        log(`❌ Failed: ${results.failed}`, 'fail');
+                        log(`⚠️  Warnings: ${results.warnings}`, 'warning');
+                        
+                        const successRate = (results.passed / (results.passed + results.failed)) * 100;
+                        log(`📈 Success Rate: ${successRate.toFixed(1)}%`, successRate >= 80 ? 'pass' : 'fail');
+                        
+                        if (results.failed > 0) {
+                            updateStatus(`Tests completed with ${results.failed} failures`, false);
+                        } else {
+                            updateStatus('All tests passed! ✅', false);
+                        }
+                    } catch (error) {
+                        log(`❌ Test execution error: ${error.message}`, 'fail');
+                        updateStatus('Test error', false);
+                    }
+                }, 1000);
+                
+            } catch (error) {
+                log(`❌ Failed to load tests: ${error.message}`, 'fail');
+                updateStatus('Error loading tests', false);
+            }
+        }
+
+        async function runSpecificTest(testType) {
+            clearConsole();
+            updateStatus(`Running ${testType} tests...`, true);
+            
+            const testMap = {
+                'language': 'testLanguageSwitching',
+                'roi': 'testROICalculator',
+                'responsive': 'testResponsiveDesign',
+                'accessibility': 'testAccessibility'
+            };
+            
+            try {
+                const testScript = await fetch('../e2e/comprehensive-test-2025.js').then(r => r.text());
+                iframe.contentWindow.eval(testScript);
+                
+                // Run specific test
+                iframe.contentWindow[testMap[testType]]();
+                
+                setTimeout(() => {
+                    updateStatus(`${testType} test completed`, false);
+                    log(`✅ ${testType} test completed - check browser console for details`, 'pass');
+                }, 2000);
+                
+            } catch (error) {
+                log(`❌ Error: ${error.message}`, 'fail');
+                updateStatus('Test error', false);
+            }
+        }
+
+        // Listen for console messages from iframe
+        iframe.onload = () => {
+            log('✅ Portfolio loaded successfully', 'pass');
+            
+            // Intercept console logs from iframe
+            const originalLog = iframe.contentWindow.console.log;
+            iframe.contentWindow.console.log = function(...args) {
+                const message = args.join(' ');
+                if (message.includes('✅')) {
+                    log(message, 'pass');
+                } else if (message.includes('❌')) {
+                    log(message, 'fail');
+                } else if (message.includes('⚠️')) {
+                    log(message, 'warning');
+                } else {
+                    log(message, 'info');
+                }
+                originalLog.apply(iframe.contentWindow.console, args);
+            };
+        };
+
+        // Keyboard shortcuts
+        document.addEventListener('keydown', (e) => {
+            if (e.ctrlKey || e.metaKey) {
+                switch(e.key) {
+                    case 'Enter':
+                        runTests();
+                        break;
+                    case 'l':
+                        clearConsole();
+                        break;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
