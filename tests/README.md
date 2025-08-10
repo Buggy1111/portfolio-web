@@ -250,7 +250,7 @@ printReport();
 
 **Test Suite vytvořen:** Claude Code Assistant  
 **Portfolio autor:** Michal Bürgermeister  
-**Email:** michal@michalbugar.dev  
+**Email:** michalbugy12@gmail.com  
 **Web:** http://localhost:5173 (development)  
 **Production:** michalbugar.dev (připraveno k nasazení)
 
