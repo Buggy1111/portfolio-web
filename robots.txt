@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://portfolio-web-two-mu.vercel.app/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Disallow unnecessary files
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.log$
+Disallow: /vite.config.js
+Disallow: /package*.json
+Disallow: /tailwind.config.cjs
+Disallow: /postcss.config.cjs
+
+# Allow all image files
+Allow: /image/
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
