@@ -222,7 +222,7 @@ const translations = {
         location: 'Lokace',
         servingCities: 'Působím v městech:',
         clickToOpenMaps: 'Kliknutím otevřete mapy',
-        emailHint: 'Použijte formulář níže'
+        emailHint: 'Použijte formulář'
       },
       success: 'Děkuji za vaši zprávu! Ozvu se vám co nejdříve.',
       error: 'Něco se pokazilo. Zkuste to prosím znovu nebo mě kontaktujte přímo na michalbugy12@gmail.com',
@@ -478,7 +478,7 @@ const translations = {
         location: 'Location',
         servingCities: 'I serve cities:',
         clickToOpenMaps: 'Click to open maps',
-        emailHint: 'Use the form below'
+        emailHint: 'Use the form'
       },
       success: 'Thank you for your message! I will get back to you as soon as possible.',
       error: 'Something went wrong. Please try again or contact me directly at michalbugy12@gmail.com',
