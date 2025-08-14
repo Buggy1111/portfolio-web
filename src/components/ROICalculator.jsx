@@ -1020,13 +1020,13 @@ const ROICalculator = () => {
                               <span className="mr-2 flex-shrink-0">💡</span>
                               <span>
                                 {currentLanguage === 'cs' 
-                                  ? 'Nenašli jste svůj typ projektu? Napište nám na '
-                                  : 'Can\'t find your project type? Write to us at '}
+                                  ? 'Nenašli jste svůj typ projektu? '
+                                  : 'Can\'t find your project type? '}
                                 <a 
-                                  href="mailto:michal@michalbugar.dev" 
+                                  href="#contact" 
                                   className="font-medium text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-200 underline"
                                 >
-                                  michal@michalbugar.dev
+                                  {currentLanguage === 'cs' ? 'Kontaktujte nás' : 'Contact us'}
                                 </a>
                                 {currentLanguage === 'cs'
                                   ? ' s popisem vašeho projektu a my vám ROI spočítáme na míru!'

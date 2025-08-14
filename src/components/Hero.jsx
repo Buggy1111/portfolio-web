@@ -136,7 +136,7 @@ const Hero = () => {
               </motion.a>
               
               <motion.a
-                href="mailto:michalbugy12@gmail.com"
+                href="#contact"
                 className="p-3 glass-effect rounded-full hover-glow"
                 whileHover={{ y: -5 }}
               >

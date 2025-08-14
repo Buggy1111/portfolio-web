@@ -79,7 +79,7 @@ const ErrorFallback = ({ error, resetError }) => {
           </button>
           
           <a
-            href="mailto:michal@michalbugar.dev"
+            href="#contact"
             className="block w-full bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-lg font-medium transition-colors text-decoration-none"
           >
             {t('error.contactSupport')}

@@ -98,7 +98,7 @@ const getProjectsData = (t) => [
       '/image/pocasi/weather-app-sound-settings.webp'
     ],
     demoUrl: '#',
-    githubUrl: 'mailto:michal@michalbugar.dev?subject=Zájem o projekt - Autoservis Evidence Orlová',
+    githubUrl: '#contact',
     category: 'frontend'
   },
   {
@@ -114,7 +114,7 @@ const getProjectsData = (t) => [
       '/image/banka/recent-transactions-list.webp'
     ],
     demoUrl: '#',
-    githubUrl: 'mailto:michal@michalbugar.dev?subject=Zájem o projekt - Cukrářské objednávky Opava',
+    githubUrl: '#contact',
     category: 'frontend'
   },
   {
@@ -130,7 +130,7 @@ const getProjectsData = (t) => [
       '/image/dochazka/statistics-statistiky-tab.webp'
     ],
     demoUrl: '#',
-    githubUrl: 'mailto:michal@michalbugar.dev?subject=Zájem o projekt - Fitness rezervace Karviná',
+    githubUrl: '#contact',
     category: 'frontend'
   },
   {
@@ -145,7 +145,7 @@ const getProjectsData = (t) => [
       '/image/produkce/vmq-production-login-screen.webp'
     ],
     demoUrl: '#',
-    githubUrl: 'mailto:michal@michalbugar.dev?subject=Zájem o projekt - Stavební kalkulace Nový Jičín',
+    githubUrl: '#contact',
     category: 'frontend'
   },
   {
@@ -161,7 +161,7 @@ const getProjectsData = (t) => [
       '/image/waste/about-modal-dialog.webp'
     ],
     demoUrl: '#',
-    githubUrl: 'mailto:michal@michalbugar.dev?subject=Zájem o projekt - Veterinární agenda Havířov',
+    githubUrl: '#contact',
     category: 'frontend'
   },
 ];
@@ -373,8 +373,6 @@ const ProjectCard = ({ project, index, onGalleryClick, t }) => {
             </motion.button>
             <motion.a
               href={project.githubUrl}
-              target="_blank"
-              rel="noopener noreferrer"
               className="flex-1 bg-gray-800 hover:bg-gray-700 text-white py-2 rounded-lg flex items-center justify-center gap-2 transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
