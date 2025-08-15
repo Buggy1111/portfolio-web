@@ -4,7 +4,7 @@ const SEO = ({
   title = "Michal Bürgermeister - Frontend Developer | React, JavaScript, TypeScript",
   description = "Profesionální frontend developer z Opavy. Specializuji se na React, JavaScript, TypeScript a moderní webové aplikace. Vytvářím luxusní, responzivní a uživatelsky přívětivé websites a aplikace.",
   keywords = "React developer, JavaScript developer, TypeScript developer, frontend developer, webové aplikace, Opava, Česká republika, responsive design, modern web development",
-  url = "https://expertreact.cz",
+  url = "https://portfolio-web-two-mu.vercel.app",
   image = "/og-image.jpg"
 }) => {
   useEffect(() => {
@@ -82,7 +82,7 @@ const SEO = ({
             "@type": "Person",
             "name": "Michal Bürgermeister",
             "jobTitle": "Frontend Developer",
-            "email": "michal@expertreact.cz",
+            "email": "michalbugy12@gmail.com",
             "telephone": "+420605954429",
             "address": {
               "@type": "PostalAddress",
