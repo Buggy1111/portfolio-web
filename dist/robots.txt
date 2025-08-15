@@ -1,27 +1,37 @@
+# Robots.txt for portfolio-web-two-mu.vercel.app
+# Generated: 2025-08-15
+
+# Default - Allow all bots
 User-agent: *
 Allow: /
-
-# Sitemap
-Sitemap: https://expertreact.cz/sitemap.xml
-
-# Crawl-delay for respectful crawling
-Crawl-delay: 1
-
-# Disallow unnecessary files
-Disallow: /src/
+Disallow: /api/
+Disallow: /_next/
 Disallow: /node_modules/
-Disallow: /*.json$
-Disallow: /*.log$
-Disallow: /vite.config.js
-Disallow: /package*.json
-Disallow: /tailwind.config.cjs
-Disallow: /postcss.config.cjs
+Disallow: /.git/
 
-# Allow all image files
+# Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 0
+
+# Assets and images explicitly allowed
+User-agent: *
 Allow: /image/
+Allow: /icons/
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.webp$
 Allow: /*.png$
 Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.gif$
 Allow: /*.svg$
-Allow: /*.webp$
+
+# Sitemap location
+Sitemap: https://portfolio-web-two-mu.vercel.app/sitemap.xml
+
+# Host preference (optional but recommended)
+Host: https://portfolio-web-two-mu.vercel.app
