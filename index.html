@@ -40,81 +40,201 @@
     
     <!-- Structured Data - JSON-LD -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Michal Bürgermeister",
-      "jobTitle": "Frontend Developer",
-      "description": "Tvorba moderních webových aplikací, skladových systémů a business řešení pro firmy z Moravskoslezského kraje. React, TypeScript, ROI kalkulačky.",
-      "url": "https://portfolio-web-two-mu.vercel.app",
-      "email": "michalbugy12@gmail.com",
-      "telephone": "+420605954429",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Kamenka",
-        "addressRegion": "Moravskoslezský kraj",
-        "addressCountry": "CZ"
-      },
-      "areaServed": [
-        {
-          "@type": "City",
-          "name": "Opava"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "@id": "https://portfolio-web-two-mu.vercel.app/#business",
+        "name": "MB Web Development",
+        "alternateName": "Michal Bürgermeister - Webové aplikace",
+        "description": "Tvorba moderních webových aplikací, skladových systémů a business řešení pro firmy z Moravskoslezského kraje. Specializace na React, TypeScript, ROI kalkulačky a WMS systémy.",
+        "url": "https://portfolio-web-two-mu.vercel.app",
+        "logo": "https://portfolio-web-two-mu.vercel.app/icons/favicon.svg",
+        "image": "https://portfolio-web-two-mu.vercel.app/og-image.webp",
+        "telephone": "+420605954429",
+        "email": "michalbugy12@gmail.com",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Kamenka",
+          "addressLocality": "Kamenka",
+          "addressRegion": "Moravskoslezský kraj",
+          "postalCode": "747 23",
+          "addressCountry": "CZ"
         },
-        {
-          "@type": "City", 
-          "name": "Ostrava"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "49.9354",
+          "longitude": "17.8145"
         },
-        {
-          "@type": "City",
-          "name": "Nový Jičín"
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+              "Monday",
+              "Tuesday",
+              "Wednesday",
+              "Thursday",
+              "Friday"
+            ],
+            "opens": "08:00",
+            "closes": "17:00"
+          }
+        ],
+        "priceRange": "$$",
+        "currenciesAccepted": "CZK, EUR",
+        "paymentAccepted": "Cash, Credit Card, Bank Transfer",
+        "areaServed": [
+          {
+            "@type": "City",
+            "name": "Opava"
+          },
+          {
+            "@type": "City",
+            "name": "Ostrava"
+          },
+          {
+            "@type": "City",
+            "name": "Nový Jičín"
+          },
+          {
+            "@type": "City",
+            "name": "Frýdek-Místek"
+          },
+          {
+            "@type": "City",
+            "name": "Karviná"
+          },
+          {
+            "@type": "City",
+            "name": "Havířov"
+          },
+          {
+            "@type": "City",
+            "name": "Třinec"
+          },
+          {
+            "@type": "City",
+            "name": "Český Těšín"
+          },
+          {
+            "@type": "State",
+            "name": "Moravskoslezský kraj"
+          }
+        ],
+        "sameAs": [
+          "https://github.com/Buggy1111",
+          "https://linkedin.com/in/michalbugar"
+        ],
+        "founder": {
+          "@type": "Person",
+          "name": "Michal Bürgermeister",
+          "jobTitle": "Frontend Developer & Founder",
+          "url": "https://portfolio-web-two-mu.vercel.app"
         },
-        {
-          "@type": "City",
-          "name": "Frýdek-Místek"
+        "foundingDate": "2023",
+        "numberOfEmployees": "1",
+        "legalName": "Michal Bürgermeister",
+        "slogan": "Moderní webové aplikace pro váš business",
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Webové služby",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Vývoj webových aplikací",
+                "description": "Tvorba moderních webových aplikací na míru pomocí React a TypeScript"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Skladové systémy WMS",
+                "description": "Implementace skladových systémů a WMS řešení"
+              }
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "ROI kalkulačky",
+                "description": "Vývoj business kalkulaček a analytických nástrojů"
+              }
+            }
+          ]
         },
-        {
-          "@type": "City",
-          "name": "Karviná"
-        },
-        {
-          "@type": "City",
-          "name": "Havířov"
-        },
-        {
-          "@type": "City",
-          "name": "Třinec"
-        },
-        {
-          "@type": "City",
-          "name": "Český Těšín"
-        },
-        {
-          "@type": "State",
-          "name": "Moravskoslezský kraj"
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "12"
         }
-      ],
-      "sameAs": [
-        "https://github.com/Buggy1111",
-        "https://linkedin.com/in/michalbugar"
-      ],
-      "knowsAbout": [
-        "React",
-        "JavaScript",
-        "TypeScript",
-        "Webové aplikace",
-        "Skladové systémy",
-        "WMS systémy",
-        "ROI kalkulačky",
-        "Business aplikace",
-        "Firebase",
-        "Tailwind CSS",
-        "Three.js"
-      ],
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Freelance Developer"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "@id": "https://portfolio-web-two-mu.vercel.app/#person",
+        "name": "Michal Bürgermeister",
+        "jobTitle": "Frontend Developer",
+        "description": "Tvorba moderních webových aplikací, skladových systémů a business řešení pro firmy z Moravskoslezského kraje. React, TypeScript, ROI kalkulačky.",
+        "url": "https://portfolio-web-two-mu.vercel.app",
+        "email": "michalbugy12@gmail.com",
+        "telephone": "+420605954429",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Kamenka",
+          "addressRegion": "Moravskoslezský kraj",
+          "addressCountry": "CZ"
+        },
+        "sameAs": [
+          "https://github.com/Buggy1111",
+          "https://linkedin.com/in/michalbugar"
+        ],
+        "knowsAbout": [
+          "React",
+          "JavaScript",
+          "TypeScript",
+          "Webové aplikace",
+          "Skladové systémy",
+          "WMS systémy",
+          "ROI kalkulačky",
+          "Business aplikace",
+          "Firebase",
+          "Tailwind CSS",
+          "Three.js"
+        ],
+        "worksFor": {
+          "@type": "Organization",
+          "@id": "https://portfolio-web-two-mu.vercel.app/#business",
+          "name": "MB Web Development"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://portfolio-web-two-mu.vercel.app/#website",
+        "url": "https://portfolio-web-two-mu.vercel.app",
+        "name": "MB Web Development - Webové aplikace Moravskoslezský kraj",
+        "description": "Profesionální tvorba webových aplikací, skladových systémů a business řešení pro firmy",
+        "publisher": {
+          "@id": "https://portfolio-web-two-mu.vercel.app/#business"
+        },
+        "inLanguage": "cs-CZ"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Domů",
+            "item": "https://portfolio-web-two-mu.vercel.app"
+          }
+        ]
       }
-    }
+    ]
     </script>
     
     <!-- Favicon and Touch Icons -->
