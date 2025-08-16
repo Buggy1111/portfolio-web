@@ -3,8 +3,8 @@
 ## Základní údaje firmy
 
 ### Název firmy
-**MB Web Development**
-- Alternativní název: Michal Bürgermeister - Webové aplikace
+**ReactExpert**
+- Alternativní název: Michal Bürgermeister - React Expert
 
 ### Kategorie podnikání
 - Hlavní: **Webdesigner** / **Vývojář softwaru**
@@ -48,7 +48,7 @@ Poskytujeme služby v následujících městech a oblastech:
 - Online služby po celé ČR
 
 ## Popis podnikání (max 750 znaků)
-Specializuji se na tvorbu moderních webových aplikací a systémů pro firmy z Moravskoslezského kraje. Nabízím vývoj webových aplikací na míru pomocí React a TypeScript, implementaci skladových systémů WMS, tvorbu ROI kalkulaček a business analytických nástrojů. Každý projekt přistupuji individuálně s důrazem na kvalitu, rychlost a návratnost investice. Pomáhám firmám digitalizovat jejich procesy a zvyšovat efektivitu pomocí moderních technologií.
+React expert specializující se na tvorbu moderních webových aplikací pro firmy z Moravskoslezského kraje. Nabízím profesionální vývoj React aplikací na míru, implementaci skladových systémů WMS, tvorbu ROI kalkulaček a business analytických nástrojů. Specializuji se na React, TypeScript a nejmodernější technologie. Každý projekt přistupuji individuálně s důrazem na kvalitu, rychlost a návratnost investice. Pomáhám firmám digitalizovat procesy pomocí React řešení.
 
 ## Služby
 1. **Vývoj webových aplikací**
